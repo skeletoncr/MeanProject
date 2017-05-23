@@ -1,0 +1,29 @@
+{
+  "name": "simple-crud",
+  "version": "1.0.0",
+  "description": "demo of crud application MEAN App",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com:skeletoncr/MeanProject.git"
+  },
+  "keywords": [
+    "crud",
+    "mongo",
+    "express",
+    "node"
+  ],
+  "author": "Rodney Espinoza",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "bootstrap": "^3.3.7",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "jquery": "^3.2.1",
+    "mongodb": "^2.1.18"
+  }
+}

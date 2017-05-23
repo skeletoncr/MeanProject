@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Crud MEAN developer</title>
+  <!--load a CSS stylesheet-->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+</head>
+<body class="container-fluid">
+<div class="row">
+  <div class="span6" style="float: none; margin: 0 8%;">
+    <div class="row">
+        <div class="well span2">
+            <div class="row">
+              <header>
+                <h1>Simple CRUD (Create, Read, Update, Delete) App in ExpressJS NodeJs and MongoDB</h1>
+                <p>Uses EJS (Embedded JavaScript) for rendering</p>
+              </header>
+            </div>
+        </div>
+    </div> 
+      <main>
+      <section id="content">
+        <h2>CRUD App Elements</h2>
+        <!--READ: list the quotes currently in the Database-->
+        <article id="quotes-list">
+        <ul id="quotes-table" class="quotes">
+          <% for(var i=0; i<quotes.length; i++) {%>
+            <li class="quote-record" id="quote-<%= i %>">
+              <div class="quote-name"><%= quotes[i].name %></div>
+              <div class="quote-content"><%= quotes[i].quote %></div>
+              <div class="quote-update"><button class="button-update" id="update-<%= i %>">Update</button></div>
+              <div class="quote-delete"><button class="button-delete" id="delete-<%= i %>">Delete</button></div>
+            </li>
+          <% } %>
+        </ul>
+        </article>
+        <!--CREATE: post a new quote-->
+        <article id="quote-post">
+          <form action="/quotes" method="POST">
+            <input type="text" placeholder="name" name="name">
+            <input type="text" placeholder="quote" name="quote">
+            <button type="submit">Submit</button>
+          </form>
+        </article>
+        <!--UPDATE:replace one quote with another-->
+        <article id="quotes-replace">
+          <h2>Replace last quote written by Rodney with a quote written by you</h2>
+          <button id="update"> Go! </button>
+        </article>
+        </br />
+        <!--DELETE: delete a quote from the database-->
+        <div class="well span2">
+          <article id="quotes-delete">
+            <h2>Delete quote</h2>
+            <button id="delete"> Delete quote </button>
+          </article>
+          </section>
+          <footer>
+            
+              
+          </footer>
+        </div>
+      </div>
+    </div>
+      <!--load client-side JS -->
+      <script src="js/index.js"></script>
+</body>
+</html>
