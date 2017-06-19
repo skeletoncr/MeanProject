@@ -1,7 +1,5 @@
 ## Simple CRUD server
 
-Adapted from: http://zellwk.com/blog/crud-express-mongodb/
-
 Uses ES6 syntax.
 
 Uses EJS (Embedded JavaScript) for rendering.
